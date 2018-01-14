@@ -53,7 +53,7 @@ $.ajax({
 
 
 })}
-        $("#city-input").on("click", (giPhy));
+        $("#city-buttons").on("click", (giPhy));
         buttons()
 
 
