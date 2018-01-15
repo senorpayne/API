@@ -2,7 +2,7 @@
 var cities = [ "Chicago","London", "Managua"];
 //testing link up
 console.log(cities[0]);
-
+//console.log(response.data);
 buttons()
 
 var still = [];
@@ -42,14 +42,16 @@ $("#add-city").on("click", function(event) {
 function giPhy() {
 
 var giphy = $(this).attr("city-data");
-var queryURL = "https://api.giphy.com/v1/gifs/search?&api_key=telbJddYkKRZ7LxKrkleNz0JWL9i45Gm&q=london&limit=10"
+var queryURL = "https://api.giphy.com/v1/gifs/search?&api_key=telbJddYkKRZ7LxKrkleNz0JWL9i45Gm&q=" + giPhy +"&limit=10"
 
 $.ajax({
           url: queryURL,
           method: "GET"
-        }).done(function(response) {$("#cities-view").text(JSON.stringify(response));
+        }).done(function(response) {$("#cities-view").html(JSON.stringify(response));
 
-        console.log(response.url);
+
+
+        
 
 
 })}
