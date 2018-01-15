@@ -1,10 +1,23 @@
 
 #city-form {
 
-background-color: yellow;
+background-color: lightblue;
 
 }
-title{
+#cities-view{
 
-	background-color: pink; 
+	
+    height:500px;
+    background-color: #cccccc;
+    background-image: linear-gradient(skyblue, green
+    );
 }
+
+h1{
+
+font-family: 'Armata';font-size: 52px;
+
+	background-color:skyblue;
+	text-align: center;
+}
+

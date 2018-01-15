@@ -40,9 +40,10 @@ $("#add-city").on("click", function(event) {
 } );
 
 function giPhy() {
+ var city = $("#city-input").val().trim();
 
 var giphy = $(this).attr("city-data");
-var queryURL = "https://api.giphy.com/v1/gifs/search?&api_key=telbJddYkKRZ7LxKrkleNz0JWL9i45Gm&q=" + giPhy +"&limit=10"
+var queryURL = "https://api.giphy.com/v1/gifs/search?&api_key=telbJddYkKRZ7LxKrkleNz0JWL9i45Gm&q=" + city +"&limit=10"
 
 $.ajax({
           url: queryURL,
@@ -50,7 +51,7 @@ $.ajax({
         }).done(function(response) {$("#cities-view").html(JSON.stringify(response));
 
 
-
+console.log(response.data);
         
 
 
