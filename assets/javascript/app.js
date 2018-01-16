@@ -51,7 +51,10 @@ $.ajax({
         }).done(function(response) {$("#cities-view").html(JSON.stringify(response));
 
 
-console.log(response.data);
+console.log(response.data[0].url);
+console.log(response.data[1].url);
+console.log(response.data[2].url);
+
         
 
 
