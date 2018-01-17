@@ -56,7 +56,7 @@ var url = response.data[i].images.fixed_height.url;
 var cityImage = $("<img>");
 cityImage.attr("src", url );
 cityDiv.append(cityImage);
-$("#cities-view").append(cityDiv);
+$("#cities-view").prepend(cityDiv);
 console.log(response);
 
 }

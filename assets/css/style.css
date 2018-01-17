@@ -7,7 +7,7 @@ background-color: lightblue;
 #cities-view{
 
 	
-    height:500px;
+    height:1500px;
     background-color: #cccccc;
     background-image: linear-gradient(skyblue, green
     );
@@ -24,5 +24,12 @@ font-family: 'Armata';font-size: 52px;
 #city-form{
 
 	font-family: monospace;
+}
+h3{
+
+font-family: 'Armata';font-size: 32px;
+
+	background-color:blue;
+	text-align: center;
 }
 
