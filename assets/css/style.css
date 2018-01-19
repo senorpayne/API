@@ -4,10 +4,10 @@
 background-color: lightblue;
 
 }
-#cities-view{
+.container{
 
 	
-    height:1500px;
+    
     background-color: #cccccc;
     background-image: linear-gradient(skyblue, green
     );
