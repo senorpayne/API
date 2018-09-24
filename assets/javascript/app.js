@@ -35,26 +35,27 @@ $.ajax({
         	//$("#cities-view").html(JSON.stringify(response));
 for ( var i = 0; i < response.data.length; i++)
 
-{ var cityDiv = $("<div>");
+{ var cityDiv = $("<div  >");
 // var stillDiv = $("<div>");
 var url = response.data[i].images.fixed_height.url;
 var stillg = response.data[i].images.fixed_height_still.url;
 
-var cityImage = $("<img>");
+var cityImage = $("<img >" );
 
 cityImage.attr("src",stillg);
  cityImage.attr("src", url );
 cityImage.attr("data-still", stillg);
 cityImage.attr("data-animate, url")
 cityImage.attr("data-state" , "still")
-cityImage.addClass("movingG");
-cityImage.addClass("stillG");
+cityImage.addClass("movingG grid");
+// cityImage.addClass("stillG grid");
 cityDiv.append(cityImage);
-$("#cities-view").prepend(cityDiv);
+$("#cities-view").prepend(cityImage);
 // var gstill = $("<img>");
 // gstill.attr("data-state", still)
 // cityDiv.append(gstill)
 //  $("#cities-view").prepend(cityDiv);
+
 }
 });
 }
@@ -75,7 +76,17 @@ $(document).on("click", ".city", (giPhy));
         
                         $(this).attr('src',still);
                         $(this).attr('data-state','still');
-        
                 }
+                
+        })   
+        $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 200,
+                gutter:400,
+                transitionDuration: '0.2',
+                 stagger:30,
+                
+                
+              }); 
         
-        })       
+              
